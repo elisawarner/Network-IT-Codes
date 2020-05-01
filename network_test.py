@@ -14,7 +14,7 @@ print('IP:',IP_address)
 print('DNS:',DNS_address)
 
 password = getpass.getpass()
-cmd = "echo %s | sudo -S tcpdump -i en0 -n host %s and port 53 -v | grep %s" % (password, DNS_address, IP_address)
+cmd = "echo %s | sudo -S tcpdump -i en0 -n host %s and port 53 -v | grep %s > history.txt" % (password, DNS_address, IP_address)
 cmd = os.system(cmd)
 
 result_dict = {}
@@ -22,7 +22,6 @@ fhnd = open('history_concat.txt','w')
 with open('history.txt') as f:
 	packets = f.readlines()
 	for p in packets:
-
 
 		result = re.findall('[a-z]+\.[a-z.]+',p)
 
