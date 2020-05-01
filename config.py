@@ -18,17 +18,17 @@ from sys import argv
 
 presenter1 = argv[2]
 presenter2 = argv[3]
-to = 'elisawa@umich.edu'
+to = 'youremail@umich.edu'
 subject = 'Lab Meeting Today at 12:30'
 
 email_templates = {
 	'depth' : 'Hi all,\n\nAs a reminder, we will have a lab meeting today at 12:30pm. Presenting today will be %s on current research in the lab\
- and %s on a Journal Club paper. Our lab meeting link is here:\n\nhttps://umich.bluejeans.com/597850455\n\n \
+ and %s on a Journal Club paper. Our lab meeting link is here:\n\nhttps://umich.bluejeans.com/yourlink\n\n \
 Kind Regards\n' % (presenter1,presenter2),
 
     'breadth' : 'Hi all:\n\nAs a reminder, we will have a lab meeting today at 12:30pm. Presenting today will be %s and %s on a few journal papers.\
   Our lab meeting link is here:\n\
-  https://umich.bluejeans.com/597850455\n\n\
+  https://umich.bluejeans.com/yourlink\n\n\
 Kind Regards' % (presenter1, presenter2)
 
 }
